@@ -1,17 +1,22 @@
 'use strict';
 
 const publications = [
-  {year:'2025', title:'Assessing Lighting Layouts in Enclosed Cabins: Multimodal Impacts on Operators and EEG-Based Emotion Modeling.', venue:'Building and Environment', role:'First author', categories:['first','journal']},
-  {year:'2024', title:'A Comprehensive Assessment Method for Manned Confined Space Layouts Taking into Account Operational Posture Comfort Supported by Artificial Intelligence Algorithm.', venue:'Journal of Building Engineering', role:'First author', categories:['first','journal']},
-  {year:'2025', title:'Exploring the Impact of the Combination of Lighting Layout Types and Illuminance Levels on Operator Fatigue in Confined Spaces.', venue:'International Conference on Human-Computer Interaction', role:'First author', categories:['first']},
-  {year:'2026', title:'Identifying Interaction Effects of Lighting Layout Parameters on Human Performance in Enclosed Indoor Environments.', venue:'Indoor Air 2026', role:'First author', status:'Conference contribution', categories:['first']},
-  {year:'2025', title:'The Cognitive Acceptance of Generative AI Image Tools Based on TPB-TAM Model and Multi-theory Integration.', venue:'Advanced Design Research', role:'First author', categories:['first','journal']},
-  {year:'In review', title:'Effects of Spatial Lighting Layout Parameters on Multimodal Human Performance in Enclosed Cabin Environments: A Response-Modeling Approach.', venue:'Manuscript under review', role:'First author', categories:['first','review']},
-  {year:'In review', title:'Dynamic Cognitive Failure Risk Prediction for Manned Submersible Operations Under Thermal Environmental Stress.', venue:'Manuscript under review', role:'First author', categories:['first','review']},
-  {year:'2025', title:'Evaluation of Cognitive Load and User Experience in Alternative Interaction Modes under Different Noise Degrees.', venue:'Advanced Engineering Informatics', role:'Second author', categories:['journal']},
-  {year:'2025', title:'A Risk Prediction Method for Change Propagation Based on Industrial Design Network Evolution.', venue:'Journal of Computational Design and Engineering', role:'Second author', categories:['journal']},
+  {year:'2025', title:'Assessing lighting layouts in enclosed cabins: Multimodal impacts on operators and EEG-based emotion modeling.', venue:'Building and Environment', role:'First author', categories:['first','journal']},
+  {year:'2024', title:'A comprehensive assessment method for manned confined space layouts taking into account operational posture comfort supported by artificial intelligence algorithm.', venue:'Journal of Building Engineering', role:'First author', categories:['first','journal']},
+  {year:'2025', title:'Exploring the impact of the combination of lighting layout types and illuminance levels on operator fatigue in confined spaces.', venue:'International Conference on Human-Computer Interaction', role:'First author', categories:['first']},
+  {year:'2026', title:'Identifying interaction effects of lighting layout parameters on human performance in enclosed indoor environments.', venue:'Indoor Air 2026', role:'First author', categories:['first']},
+  {year:'2025', title:'The cognitive acceptance of generative AI image tools based on TPB-TAM model and multi-theory integration.', venue:'Advanced Design Research', role:'First author', categories:['first','journal']},
+  {year:'2024', title:'A review of artificial intelligence-driven generation of visual communication works.', venue:'Packaging Engineering (in Chinese)', role:'First author', categories:['first','journal']},
+  {year:'2023', title:'A DELMIA-based method for virtual maintenance simulation and evaluation of civil aircraft interiors.', venue:'Packaging Engineering (in Chinese)', role:'Second author', categories:['journal']},
+  {year:'2025', title:'Evaluation of cognitive load and user experience in alternative interaction modes under different noise degrees.', venue:'Advanced Engineering Informatics', role:'Second author', categories:['journal']},
+  {year:'2025', title:'A risk prediction method for change propagation based on industrial design network evolution.', venue:'Journal of Computational Design and Engineering', role:'Second author', categories:['journal']},
+  {year:'2024', title:'Research on influencing factors of users’ intention to use personalized generated virtual digital humans in financial apps based on TAM.', venue:'2024 5th International Conference on Intelligent Design (ICID)', role:'Second author', categories:[]},
+  {year:'2025', title:'The effect of pre-sleep lighting on melatonin, sleep and alertness of the crews in the enclosed cabins in the evening with the cumulative effect of light.', venue:'Building and Environment', role:'Co-author', categories:['journal']},
   {year:'2024', title:'Human risk recognition and prediction in manned submersible diving tasks driven by deep learning models.', venue:'Advanced Engineering Informatics', role:'Co-author', categories:['journal']},
-  {year:'2025', title:'The effect of pre-sleep lighting on melatonin, sleep and alertness of the crews in the enclosed cabins in the evening with the cumulative effect of light.', venue:'Building and Environment', role:'Co-author', categories:['journal']}
+  {year:'2025', title:'A theoretical model for evaluation of non-visual effects of lighting based on human performance: Comprehensive research ideas.', venue:'Displays', role:'Co-author', categories:['journal']},
+  {year:'2026', title:'Biophilic design in closed cabins: A scoping review of habitability countermeasure pathways under isolated, confined, and extreme conditions.', venue:'Acta Astronautica', role:'Co-author', categories:['journal']},
+  {year:'In review', title:'Effects of spatial lighting layout on multimodal human performance in a virtual-physical hybrid enclosed-cabin task environment.', venue:'International Journal of Human–Computer Interaction', role:'First author', status:'Under review', categories:['first','review']},
+  {year:'In review', title:'Dynamic cognitive failure risk prediction for manned submersible operations under thermal environmental stress.', venue:'International Journal of Naval Architecture and Ocean Engineering', role:'First author', status:'Under review', categories:['first','review']}
 ];
 
 const list = document.querySelector('#publication-list');
@@ -59,7 +64,7 @@ document.querySelectorAll('.filter').forEach(button => {
       item.hidden = !show;
       if (show) count++;
     });
-    document.querySelector('.publication-count').textContent = count + ' selected ' + (count === 1 ? 'item' : 'items');
+    document.querySelector('.publication-count').textContent = count + ' ' + (count === 1 ? 'item' : 'items');
   });
 });
 
