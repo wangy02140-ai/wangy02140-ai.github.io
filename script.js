@@ -14,9 +14,7 @@ const publications = [
   {year:'2025', title:'The effect of pre-sleep lighting on melatonin, sleep and alertness of the crews in the enclosed cabins in the evening with the cumulative effect of light.', venue:'Building and Environment', role:'Co-author', categories:['journal']},
   {year:'2024', title:'Human risk recognition and prediction in manned submersible diving tasks driven by deep learning models.', venue:'Advanced Engineering Informatics', role:'Co-author', categories:['journal']},
   {year:'2025', title:'A theoretical model for evaluation of non-visual effects of lighting based on human performance: Comprehensive research ideas.', venue:'Displays', role:'Co-author', categories:['journal']},
-  {year:'2026', title:'Biophilic design in closed cabins: A scoping review of habitability countermeasure pathways under isolated, confined, and extreme conditions.', venue:'Acta Astronautica', role:'Co-author', categories:['journal']},
-  {year:'In review', title:'Effects of spatial lighting layout on multimodal human performance in a virtual-physical hybrid enclosed-cabin task environment.', venue:'International Journal of Human–Computer Interaction', role:'First author', status:'Under review', categories:['first','review']},
-  {year:'In review', title:'Dynamic cognitive failure risk prediction for manned submersible operations under thermal environmental stress.', venue:'International Journal of Naval Architecture and Ocean Engineering', role:'First author', status:'Under review', categories:['first','review']}
+  {year:'2026', title:'Biophilic design in closed cabins: A scoping review of habitability countermeasure pathways under isolated, confined, and extreme conditions.', venue:'Acta Astronautica', role:'Co-author', categories:['journal']}
 ];
 
 const list = document.querySelector('#publication-list');
@@ -37,13 +35,7 @@ for (const paper of publications) {
   role.textContent = paper.role;
   const venue = document.createElement('span');
   venue.textContent = paper.venue;
-  if (paper.categories.includes('review')) venue.className = 'review-label';
   meta.append(role, venue);
-  if (paper.status) {
-    const status = document.createElement('span');
-    status.textContent = paper.status;
-    meta.append(status);
-  }
   body.append(title, meta);
   article.append(year, body);
   list.append(article);
